@@ -1,0 +1,44 @@
+.container {
+  text-align: center;
+}
+
+.navbar-static-top .page-title {
+  display: inline-block;
+  float: none;
+  font-size: 1.5em;
+}
+
+.navbar-static-top .cancel-btn {
+  float: right;
+  margin: 13px;
+}
+
+#add-event-form {
+  width: 50%;
+  margin: auto;
+}
+
+#add-event-form input[type='text'],
+#add-event-form input[type='date'] {
+  margin: 5px 0;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-menu {
+  box-sizing: content-box;
+  padding: 0 15px;
+}
+
+form#add-event-form input.add-event-btn {
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  #add-event-form {
+    width: 100%;
+  }
+}

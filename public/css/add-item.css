@@ -1,0 +1,43 @@
+.container {
+  text-align: center;
+}
+
+.navbar-static-top .page-title {
+  display: inline-block;
+  float: none;
+  font-size: 1.5em;
+}
+
+.navbar-static-top .cancel-btn {
+  float: right;
+  margin: 13px;
+}
+
+#add-item-form {
+  width: 50%;
+  margin: auto;
+}
+
+#add-item-form input[type="text"] {
+  margin: 5px 0;
+}
+
+.dropdown {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.dropdown-menu {
+  padding: 0 15px;
+}
+
+.add-item-btn {
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  #add-item-form {
+    width: 100%;
+  }
+}

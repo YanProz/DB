@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Добавить заявку</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/add-item.css">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <p class="navbar-text page-title">Добавление в базу</p>
+      <a href="cabinet.html" type="button" class="btn btn-default navbar-btn cancel-btn">Отмена</a>
+    </div>
+  </nav>
+
+  <form id="add-item-form" method="POST" class="panel panel-default">
+    <div class="panel-body">
+      <input type="text" class="form-control" name="last-name" placeholder="Фамилия">
+      <input type="text" class="form-control" name="first-name" placeholder="Имя">
+      <input type="text" class="form-control" name="middle-name" placeholder="Отвество">
+      <br>
+      <span>Дата рождения: </span>
+      <input type="date" name="birthday">
+      <br><br>
+      <input type="text" class="form-control" name="phone" placeholder="Телефон">
+      <input type="text" class="form-control" name="school" placeholder="Школа">
+      <input type="text" class="form-control" name="to-offer" placeholder="Что предлагаем">
+      <input type="text" class="form-control" name="parent-fname" placeholder="Имя родителя">
+      <input type="text" class="form-control" name="parent-lname" placeholder="Фамилия родителя">
+      
+      <span>Статус: </span>
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <span class="value" data-name="status">Выбрать</span>
+          <span class="caret"></span>
+        </button>
+
+        <div class="dropdown-menu">
+          <div class="radio">
+            <label><input type="radio" name="status">Option 1</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="status">Option 2</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="status">Option 3</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="status">Option 4</label>
+          </div>
+        </div>
+      </div>
+      <br>
+      <span>Когда позвонить: </span>
+      <input type="date" name="when-to-call">
+      <br><br>
+      <input type="submit" class="btn btn-success add-item-btn" value="Готово">
+    </div>
+  </form>
+  <script src="../../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../js/radio-update.js"></script>
+</body>
+</html>

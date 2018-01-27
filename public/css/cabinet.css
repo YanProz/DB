@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 1.5em;
+  float: none;
+  display: inline-block;
+}
+
+.container {
+  text-align: center;
+}
+
+.navbar-static-top .logout-btn {
+  float: right;
+  margin: 13px;
+}
+
+.basic-actions {
+  width: 100%;
+}
+
+.should-call-alert {
+  text-align: left;
+  height: 100%;
+}
+
+.should-call-alert > .should-call-amount {
+  font-weight: bold;
+}
+
+.should-call-alert > .check-phone-numbers {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  .basic-actions .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .should-call-alert > .check-phone-numbers {
+    display: inherit;
+    margin: 0;
+  }
+}
