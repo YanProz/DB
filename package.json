@@ -1,20 +1,20 @@
 {
-  "name": "db",
+  "name": "Jared",
   "version": "1.0.0",
-  "description": "laalla",
-  "main": "api.js",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.18.2",
-    "client-sessions": "^0.8.0",
-    "csurf": "^1.9.0",
-    "express": "^4.16.2",
-    "mongoose": "^5.0.1"
-  },
-  "devDependencies": {},
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "*",
+    "bower": "^1.8.2",
+    "client-sessions": "^0.8.0",
+    "csurf": "^1.9.0",
+    "express": "*",
+    "mongoose": "*"
+  },
+  "author": "banan",
   "license": "ISC"
 }

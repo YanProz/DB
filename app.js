@@ -1,3 +1,5 @@
+const PORT = 3000;
+
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var express = require('express');
@@ -10,14 +12,17 @@ var csrf = require('csurf');
 Admin =require('./models/admin');
 Pupil =require('./models/pupil');
 Event =require('./models/event');
+
 //
 
 var app = express();
 app.locals.pretty = true;
 app.use(bodyParser.urlencoded({extended:true}));
 
-mongoose.connect('mongodb://localhost:27017/DBManager');
+mongoose.connect('localhost:27017/Jared');
+
+app.use(express.static(__dirname + '/public'));
 app.use(require('./api'));
 
-app.listen(3000);
-console.log("listening 3000");
+app.listen(PORT);
+console.log(`listening ${PORT}`);
