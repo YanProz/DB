@@ -1,10 +1,14 @@
-var bodyParser = require('body-parser');
+
 const express = require('express');
 const router = express.Router();
 var sessions= require('client-sessions');
 
 
+var bodyParser = require('body-parser');
 var urlencodedParser = module.exports = bodyParser.urlencoded({ extended: false });
+
+
+
 
 function requireLogin(req, res, next){
     if(!req.admin){
@@ -14,6 +18,8 @@ function requireLogin(req, res, next){
         next();
     }
 }
+
+ 
 router.use(sessions({
     cookieName:'session',
     secret: 'fvfvfgb4bt554444444',
@@ -50,7 +56,7 @@ router.get('/', function(req, res){
 router.post('/', urlencodedParser, function(req, res){
     Admin.findOne({login: req.body.login}, function(err, admin){
         if(!admin){
-            res.sendfile('views/index.html', {error:'Invalid email or password.'});
+            (res.redirect('/'), {error:'Invalid email or password.'});
         }
         else{
             if(req.body.password == admin.password){
@@ -58,17 +64,18 @@ router.post('/', urlencodedParser, function(req, res){
                 res.redirect('/cabinet');
             }
             else{
-                res.sendfile('public/views/index.html', {error:'Invalid email or password.'});
+                (res.redirect('/'), {error:'Invalid email or password.'});
             }
         }
     })
 })
 
 //API cabinet
-router.get('/cabinet', requireLogin, function(req, res){
+/* router.get('/cabinet', requireLogin, function(req, res){
    res.sendfile('public/views/cabinet.html');
 })
-//API add-item
+*/
+/*//API add-item
 router.get('/add-item', requireLogin, function(req, res){
    res.sendfile('public/views/add-item.html');
 })
@@ -80,7 +87,7 @@ router.post('/add-item', urlencodedParser,  function(req, res){
     res.redirect('/add-item');
 });
 
-//API add-event
+/* API add-event
 router.get('/add-event', requireLogin, function(req, res){
    res.sendfile('public/views/add-event.html');
 })
@@ -91,7 +98,7 @@ router.post('/add-event', urlencodedParser,  function(req, res){
     console.log(req.body);
     res.redirect('/add-event');
 });
-
+*/
 router.get('/logout', function(req, res){
     req.session.reset();
     res.redirect('/');
@@ -99,3 +106,4 @@ router.get('/logout', function(req, res){
 )
 
 module.exports = router;
+
